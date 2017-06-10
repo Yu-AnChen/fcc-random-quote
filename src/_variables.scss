@@ -1,0 +1,20 @@
+$bodyBgColor: #E1E5EE;
+$textColor: #2A324B;
+$fontFamily: 'Lora', serif;
+$sansSerifFont: 'Catamaran', sans-serif;
+$letterSp1: 0.025em;
+
+@mixin linx ($link, $visit, $hover, $active) {
+  a {
+    color: $link;
+    &:visited {
+      color: $visit;
+    }
+    &:hover {
+      color: $hover;   
+    }
+    &:active {
+      color: $active;
+    }
+  }
+}
