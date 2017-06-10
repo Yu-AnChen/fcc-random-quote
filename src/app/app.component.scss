@@ -1,0 +1,18 @@
+@import '../_variables.scss';
+
+h1 {
+    font-family: $sansSerifFont;
+    font-weight: 900;
+    font-size: 1.5em;
+    line-height: 1em;
+    display: inline-block;
+    margin: 1em;
+}
+.container {
+    padding: 0px 1em;
+}
+@media (min-width: 600px) {
+    .container {
+        width: 600px;
+    }
+}
