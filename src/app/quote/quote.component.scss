@@ -1,0 +1,73 @@
+@import '../../_variables.scss';
+@import '../app.component.scss';
+
+:host /deep/ p {
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+}
+
+.button-container {
+    @extend h1;
+    float: right;
+    height: 2em;
+    display: inline-flex;
+    align-items: center;
+}
+
+hr {
+    background: $textColor;
+    border: 0;
+    height: 3px;
+    margin: 0;
+}
+
+.button {
+    color: initial;
+    font-family: $sansSerifFont;
+    width: 1.5em;
+    height: 1.5em;
+    border: solid 2px;
+    text-align: center;
+    margin-left: 1em;
+    border-radius: 1em;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.25s;
+
+    &:hover {
+        background-color: $textColor;
+        color: $bodyBgColor;
+        border-color: $textColor;
+        transition: background-color 0.25s;
+    }
+
+    &:active {
+        background-color: lighten($textColor, 50%);
+        border-color: darken($textColor, 50%);
+    }
+
+}
+
+.quote-container {
+    // margin-bottom: 8em;
+    position: relative;
+
+}
+
+.quote-symble {
+    font-size: 5em;
+    height: 0.5em;
+    margin-top: 1em;
+}
+
+h2 {
+    margin-bottom: 0.5em;
+    padding-left: 1em;
+}
+
+h3 {
+    text-align: right;
+    margin-top: 0em;
+}
