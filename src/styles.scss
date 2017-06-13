@@ -1,22 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import url('https://fonts.googleapis.com/css?family=Lora|Catamaran:900');
 @import '_variables.scss';
-
 @for $index from 1 through 6 {
-  h#{$index}{
+  h#{$index} {
     font-weight: 400;
   }
 }
+
 body {
-    background-color: $bodyBgColor;
-    color: $textColor;
-    font-family: $fontFamily;
-    display: flex;
-    justify-content: center;
-    letter-spacing: $letterSp1;
-    min-height: 100vh;
-    margin: 0px;
-    position: relative;
+  margin: 0px;
+}
+
+app-root {
+  background-color: $bodyBgColor;
+  color: $textColor;
+  font-family: $fontFamily;
+  display: flex;
+  justify-content: center;
+  letter-spacing: $letterSp1;
+  min-height: 100vh;
+  margin: 0px;
+  position: relative;
 }
 
 .m-t-1 {
@@ -28,7 +33,7 @@ body {
 }
 
 .hidden {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 @include linx($textColor, $textColor, $textColor, $textColor);
@@ -36,7 +41,6 @@ body {
 a:not(.button) {
   position: relative;
   text-decoration: none;
-
   &::before {
     position: absolute;
     content: '';
@@ -46,7 +50,6 @@ a:not(.button) {
     bottom: 0px;
     transition: border-bottom 0.2s;
   }
-
   &:hover {
     &::before {
       border-bottom: solid 5px #FE5F55;
