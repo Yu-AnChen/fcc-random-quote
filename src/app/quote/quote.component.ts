@@ -23,7 +23,7 @@ import { style, state, animate, transition, trigger } from '@angular/animations'
 	]
 })
 export class QuoteComponent implements OnInit, OnDestroy {
-	quotes: Array<object>;
+	quotes: Array<any>;
 	numberOfQuotes = 25;
 	showing = 0;
 	subscription: Subscription;
@@ -58,8 +58,26 @@ export class QuoteComponent implements OnInit, OnDestroy {
 		setTimeout(() => this.showing = num, 500);
 	}
 
+	tweet() {
+		let currentQuote = this.quotes[this.showing];
+		let quoteContnetText = this._htmlToText(currentQuote.content);
+		let quoteTitle = currentQuote.title;
+
+		let fullQuoteText = `"${quoteContnetText}" - ${quoteTitle}`;
+
+		let url = `https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=${encodeURIComponent(fullQuoteText)}`;
+
+		window.open(url, '_blank');
+	}
+
 	ngOnDestroy() {
     // prevent memory leak when component destroyed
-    this.subscription.unsubscribe();
-  }
+    	this.subscription.unsubscribe();
+  	}
+
+	_htmlToText(html) {
+		let el = document.createElement('div');
+		el.innerHTML = html;
+		return el.innerText.trim();
+	}
 }

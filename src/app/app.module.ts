@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
+import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome'; 
+
 import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { FooterComponent } from './footer/footer.component';
@@ -19,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    JsonpModule
+    JsonpModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

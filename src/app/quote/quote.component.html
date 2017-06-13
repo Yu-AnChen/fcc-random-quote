@@ -8,5 +8,10 @@
     <div class="quote-symble">&ldquo;</div>
     <h2 [innerHTML]="quote.content" class="m-b-0"></h2>
     <h3>- <span [innerHTML]="quote.title"></span></h3>
+    <div style="text-align:right">
+      <a (click)="tweet()" class="twitter-link">
+        <fa name="twitter" size="lg"></fa>
+      </a>
+    </div>
   </div>
 </div>
